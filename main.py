@@ -1,6 +1,4 @@
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
+
 
 import os
 import re
@@ -104,7 +102,7 @@ async def upload(bot: Client, m: Message):
     
     
 
-    await editable.edit("Now Enter A Caption to add caption on your uploaded file")
+    await editable.edit("Extracted By ➤ ")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
@@ -114,7 +112,7 @@ async def upload(bot: Client, m: Message):
     else:
         MR = raw_text3
    
-    await editable.edit("Now send the Thumb url/nEg »\n Or if don't want thumbnail send = no")
+    await editable.edit("Now send the Thumb url/nEg » https://graph.org/file/ce1723991756e48c35aa1.jpg \n Or if don't want thumbnail send = no")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
     await input6.delete(True)
@@ -132,7 +130,7 @@ async def upload(bot: Client, m: Message):
     else:
         count = int(raw_text)
 
-        try:
+    try:
         for i in range(count - 1, len(links)):
 
             V = links[i][1].replace("file/d/","uc?export=download&id=").replace("www.youtube-nocookie.com/embed", "youtu.be").replace("?modestbranding=1", "").replace("/view?usp=sharing","") # .replace("mpd","m3u8")
@@ -208,7 +206,7 @@ async def upload(bot: Client, m: Message):
             else:
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
-            try: 
+            try:
                 
                 cc = f'**[📽️] Vid_ID:** {str(count).zfill(3)} {𝗻𝗮𝗺𝗲𝟭}.mkv\n\n**𝔹ᴀᴛᴄʜ** » **{raw_text0}\n\n** Extracted By ➤ :{MR}'
                 
